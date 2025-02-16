@@ -3,7 +3,9 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const jobRoutes = require('./routes/jobRoutes');
+const internshipRoutes = require('./routes/internshipRoutes');
 const adminRoutes = require('./routes/adminRoutes');
+const certificationRoutes = require("./routes/certificationRoutes");
 
 const app = express();
 
@@ -16,7 +18,9 @@ app.use(express.json());
 
 // Routes
 app.use('/api/jobs', jobRoutes);
+app.use('/api/internships', internshipRoutes);  // Add internship routes
 app.use('/api/admin', adminRoutes);
+app.use("/api/certifications", certificationRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
