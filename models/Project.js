@@ -11,7 +11,11 @@ const projectSchema = new mongoose.Schema({
       type: String,
       required: [true, 'Project link is required']
     },
-    techStack: {
+    ouputImg:{
+      type:String,
+      required:[true,"output img url is required"]
+    },
+    tools: {
       type: [String],
       required: [true, 'Tech stack is required']
     },
