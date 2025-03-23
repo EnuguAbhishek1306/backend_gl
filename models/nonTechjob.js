@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const techJobSchema = new mongoose.Schema({
+const nontechJobSchema = new mongoose.Schema({
   companyName: {
     type: String,
     required: [true, 'Company name is required']
@@ -51,4 +51,4 @@ const techJobSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Techjob', techJobSchema);
+module.exports = mongoose.model('NonTechjob', nontechJobSchema);

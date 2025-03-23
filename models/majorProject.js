@@ -1,4 +1,5 @@
-const projectSchema = new mongoose.Schema({
+const mongoose = require('mongoose');
+const majorprojectSchema = new mongoose.Schema({
     title: {
       type: String,
       required: [true, 'Title is required']
@@ -32,4 +33,4 @@ const projectSchema = new mongoose.Schema({
       default: Date.now
     }
   });
-  module.exports=mongoose.model('Project', projectSchema)
+  module.exports=mongoose.model('majorProject', majorprojectSchema)
